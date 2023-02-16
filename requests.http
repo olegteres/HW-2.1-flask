@@ -1,0 +1,55 @@
+####
+# регистрация
+POST http://127.0.0.1:5000/api/login/
+content-type: application/json
+
+{
+  "username": "tester1",
+  "email": "testflask1@mail.ru",
+  "password": "1234gg78"
+}
+####
+
+####
+# добавление объявления
+POST http://127.0.0.1:5000/api/posts/
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDI3OTQ2NjcsIm5iZiI6MTY0Mjc5NDY2NywianRpIjoiZDYwNzlkYTgtZmM3YS00MmExLTk3ODMtOGNiMDcyMDU2NTdjIiwiZXhwIjoxNjQzMzk5NDY3LCJpZGVudGl0eSI6IjE0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.x2kzcpxfU552fZm2ffZ9IZQDvXxWiMDaoUqyiBu9TX0
+
+{
+  "title": "test1",
+  "content": "This is test content"
+}
+####
+
+####
+# просморт всех объявлений
+GET http://127.0.0.1:5000/api/posts/
+content-type: application/json
+####
+
+####
+# просморт одного объявления
+GET http://127.0.0.1:5000/api/posts/5
+content-type: application/json
+####
+
+####
+
+# удаление объявления
+DELETE http://127.0.0.1:5000/api/posts/6
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDI3OTQ2NjcsIm5iZiI6MTY0Mjc5NDY2NywianRpIjoiZDYwNzlkYTgtZmM3YS00MmExLTk3ODMtOGNiMDcyMDU2NTdjIiwiZXhwIjoxNjQzMzk5NDY3LCJpZGVudGl0eSI6IjE0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.x2kzcpxfU552fZm2ffZ9IZQDvXxWiMDaoUqyiBu9TX0
+####
+
+# обновление объявления
+PUT http://127.0.0.1:5000/api/posts/5
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDI3OTQ2NjcsIm5iZiI6MTY0Mjc5NDY2NywianRpIjoiZDYwNzlkYTgtZmM3YS00MmExLTk3ODMtOGNiMDcyMDU2NTdjIiwiZXhwIjoxNjQzMzk5NDY3LCJpZGVudGl0eSI6IjE0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.x2kzcpxfU552fZm2ffZ9IZQDvXxWiMDaoUqyiBu9TX0
+
+{
+  "title": "test2",
+  "content": "This is new  test content"
+}
+
+####
