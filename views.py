@@ -71,11 +71,10 @@ class PostView(MethodView):
         return 'post deleted', 200
 
 
-app.add_url_rule('/api/login/', view_func=UserView.as_view('users_create'), methods=['POST', ])
 app.add_url_rule('/api/users/<int:user_id>', view_func=UserView.as_view('users_get'), methods=['GET', ])
+app.add_url_rule('/api/login/', view_func=UserView.as_view('users_create'), methods=['POST', ])
 
 app.add_url_rule('/api/posts/<int:post_id>', view_func=PostView.as_view('posts_get'), methods=['GET', ])
 app.add_url_rule('/api/posts/', view_func=PostView.as_view('posts_create'), methods=['POST', ])
 app.add_url_rule('/api/posts/<int:post_id>', view_func=PostView.as_view('posts_delete'), methods=['DELETE', ])
 app.add_url_rule('/api/posts/<int:post_id>', view_func=PostView.as_view('posts_put'), methods=['PUT', ])
-

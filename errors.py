@@ -8,13 +8,12 @@ class BasicException(Exception):
 	status_code = 0
 	default_message = 'Unknown Error'
 
-
-def __init__(self, message: str = None, status_code: int = None):
-	super().__init__(message)
-	self.message = message
-	request.status = self.status_code
-	if status_code is not None:
-		self.status_code = status_code
+	def __init__(self, message: str = None, status_code: int = None):
+		super().__init__(message)
+		self.message = message
+		request.status = self.status_code
+		if status_code is not None:
+			self.status_code = status_code
 
 	def to_dict(self):
 

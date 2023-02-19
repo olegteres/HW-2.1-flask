@@ -1,8 +1,3 @@
-
-# POSTGRE_URI = 'postgresql://helen:123@127.0.0.1:5432/flask_test'
-# SALT = 'my_sJHLHLHKLаваыпuper_s!alt_#4$434'
-# SQLALCHEMY_TRACK_MODIFICATIONS = False
-
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -12,7 +7,7 @@ class Config(object):
     CSRF_ENABLED = True
     WTF_CSRF_SECRET_KEY = '**************'
     SECRET_KEY = '***********'
-    SQLALCHEMY_DATABASE_URI = 'postgresql://helen:123@127.0.0.1:5432/flask_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:alexey@127.0.0.1:5432/flask_home'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JWT_SECRET_KEY = '********************************'
 
